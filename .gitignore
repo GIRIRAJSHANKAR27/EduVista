@@ -1,0 +1,27 @@
+# Ignore .env files
+client/.env
+server/.env
+
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Build directories
+build/
+dist/
+
+# Dependency directories
+client/node_modules/
+server/node_modules/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db

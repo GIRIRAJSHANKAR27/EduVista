@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            color: #666;
+        }
+        .order-details {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .order-details p {
+            margin: 5px 0;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Order Confirmation</h1>
+        <p>Dear <%= user.name %>,</p>
+        <p>Thank you for your purchase at EduVista! We are excited to confirm your order. Here are the details of your purchase:</p>
+
+        <div class="order-details">
+            <p><strong>Order ID:</strong> <%= order._id %></p>
+            <p><strong>Course Name:</strong> <%= order.name %></p>
+            <p><strong>Price:</strong> $<%= order.price %></p>
+            <p><strong>Order Date:</strong> <%= order.date %></p>
+        </div>
+
+        <p>To view your course and start learning, please sign in to your account.</p>
+        <a href="" class="btn">Sign In</a>
+
+        <p>If you have any questions or need further assistance, feel free to contact our support team.</p>
+
+        <p>Best regards,<br>
+        EduVista</p>
+    </div>
+</body>
+</html>
+
