@@ -16,7 +16,8 @@ import { signIn } from "next-auth/react";
 type Props = {
   setRoute: (route: string) => void;
   setOpen: (open: boolean) => void;
-  refetch:any;
+  // refetch:any;
+  refetch?: () => void;
 };
 
 const schema = Yup.object().shape({
@@ -41,7 +42,8 @@ const Login: FC<Props> = ({ setRoute, setOpen,refetch }) => {
     if (isSuccess) {
       toast.success("Login Successfully!");
       setOpen(false);
-      refetch();
+      // refetch();
+      if (refetch) refetch();
     }
     if (error) {
       if ("data" in error) {
